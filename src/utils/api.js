@@ -5,7 +5,7 @@ const crypto = require('crypto')
 export const login = (phone, password) => {
   return axios({
     method: 'post',
-    url: `https://netease-music-web.vercel.app/api/login/cellphone?phone=${phone}&password=${crypto.createHash('md5').update(password).digest('hex')}`,
+    url: `https://netease-music-web.vercel.app/api/login/cellphone?countrycode=86&phone=${phone}&password=fakePassword&md5_password=${crypto.createHash('md5').update(password).digest('hex')}`,
     withCredentials: true,
   })
 }
