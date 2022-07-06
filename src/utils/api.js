@@ -13,7 +13,7 @@ export const login = (phone, password) => {
 export const rush = () => {
   return axios({
     method: 'post',
-    url: `https://netease-music-web.vercel.app/api/recommend/resource`,
+    url: `https://netease-music-web.vercel.app/api/likelist`,
     withCredentials: true,
   })
 }
